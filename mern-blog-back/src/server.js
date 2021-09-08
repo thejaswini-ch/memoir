@@ -12,7 +12,7 @@ const withDB = async (operations, res) => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    const db = client.db("myblog");
+    const db = client.db("mydb");
     await operations(db);
     client.close();
   } catch (error) {
